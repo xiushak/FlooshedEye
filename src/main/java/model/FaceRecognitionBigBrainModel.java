@@ -64,6 +64,6 @@ public class FaceRecognitionBigBrainModel extends FaceRecognitionFishEyeModel {
   @Override
   public void processImage(int x, int y) throws IllegalStateException {
     Rectangle rect = faceRecognitionDelegate.findFace(delegate.getImage());
-    delegate.processImage(rect.x() + rect.width() / 2, rect.y() + rect.height() / 5);
+    delegate.processImage(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 5);
   }
 }
