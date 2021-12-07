@@ -32,8 +32,9 @@ This one is an example where the effect was moved to the top left quadrant of th
 
 ![alt text](movedFisheyeGrid.png?raw=true)
 
-To use the FacialRecognitionFishEyeModel, you need to download OpenCV. I used opencv-453 in this
-implementation. Below is an example using my face.
+To use the FacialRecognitionFishEyeModel, you need to download OpenCV for python.
+
+```pip install opencv-python```
 
 ![alt_text](face.jpg?raw=true)
 ![alt text](faceFisheye.png?raw=true)
