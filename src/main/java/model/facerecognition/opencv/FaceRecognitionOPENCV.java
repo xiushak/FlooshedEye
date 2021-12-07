@@ -32,7 +32,7 @@ public class FaceRecognitionOPENCV implements FaceRecognition {
     }
     String script = "lib/opencv/FaceRecognitionOPENCVPython.py";
 
-    ProcessBuilder processBuilder = new ProcessBuilder("python", script);
+    ProcessBuilder processBuilder = new ProcessBuilder("python3", script);
     processBuilder.redirectErrorStream(true);
     Process process;
     try {
