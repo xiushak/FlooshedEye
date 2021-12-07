@@ -18,3 +18,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.github.xiushak'
+            artifactId = 'FlooshedEye'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
