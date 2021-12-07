@@ -2,6 +2,21 @@
 
 A program to apply the fisheye effect on images. There is currently 3 versions of the effect.
 
+- Project level `build.gradle`
+
+```gradle
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencies {
+    implementation 'com.github.xiushak:FlooshedEye:master-SNAPSHOT'
+}
+```
+
+
+
 ![alt text](grid.jpg?raw=true)
 
 The first version, EllipseFishEyeModel, maps the image onto an ellipse. This one does not allow you to change where the
