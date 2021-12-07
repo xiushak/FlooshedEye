@@ -1,6 +1,5 @@
-import random
-
 import cv2
+import random
 
 
 def detect_faces(cascade, image):
@@ -25,8 +24,9 @@ def detect_faces(cascade, image):
 
 
 # loading image
-file = 'src/main/java/model/facerecognition/outFile.jpg'
+file = 'src/main/java/model/facerecognition/opencv/outFile.jpg'
 test_image2 = cv2.imread(file)
-haar_cascade_face = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+haar_cascade_face = cv2.CascadeClassifier(
+  'src/main/java/model/facerecognition/opencv/haarcascade_frontalface_alt.xml')
 # call the function to detect faces
 detect_faces(haar_cascade_face, test_image2)

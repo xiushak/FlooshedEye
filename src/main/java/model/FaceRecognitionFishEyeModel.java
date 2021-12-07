@@ -2,8 +2,8 @@ package model;
 
 import java.awt.image.BufferedImage;
 import model.facerecognition.FaceRecognition;
-import model.facerecognition.FaceRecognitionOPENCV;
 import model.facerecognition.Rectangle;
+import model.facerecognition.opencv.FaceRecognitionOPENCV;
 
 /**
  * An implementation of {@link SimpleModel} that automatically fisheyes on the center of a person's
