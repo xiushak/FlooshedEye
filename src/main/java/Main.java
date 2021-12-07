@@ -69,7 +69,7 @@ public class Main {
 
   private static void useMultiModel() throws IOException {
     MultiSimpleController cont = new MultiBasicController();
-    cont.uploadFolder(new File("face.jpg"));
+    cont.uploadFolder(new File("images/people/jpatel"));
     cont.processAll();
     cont.outputAll();
   }
