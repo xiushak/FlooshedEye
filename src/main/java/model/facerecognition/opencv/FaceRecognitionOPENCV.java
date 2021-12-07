@@ -18,7 +18,7 @@ import model.facerecognition.Rectangle;
 public class FaceRecognitionOPENCV implements FaceRecognition {
 
   public Rectangle findFace(BufferedImage bi) {
-    String outFile = "opencv-outFile.jpg";
+    String outFile = "lib/opencv-outFile.jpg";
     File file = new File(outFile);
     try {
       BufferedImage newImage = new BufferedImage(bi.getWidth(), bi.getHeight(),
@@ -30,7 +30,7 @@ public class FaceRecognitionOPENCV implements FaceRecognition {
       System.out.println("failed to find face: error outputing image to python script");
       return new Rectangle(0, 0, bi.getWidth(), bi.getHeight());
     }
-    String script = "src/main/java/model/facerecognition/opencv/FaceRecognitionOPENCVPython.py";
+    String script = "lib/opencv/FaceRecognitionOPENCVPython.py";
 
     ProcessBuilder processBuilder = new ProcessBuilder("python", script);
     processBuilder.redirectErrorStream(true);
