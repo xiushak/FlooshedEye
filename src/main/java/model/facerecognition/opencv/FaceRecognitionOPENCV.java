@@ -18,7 +18,7 @@ import model.facerecognition.Rectangle;
 public class FaceRecognitionOPENCV implements FaceRecognition {
 
   public Rectangle findFace(BufferedImage bi) {
-    String outFile = "src/main/java/model/facerecognition/opencv/outFile.jpg";
+    String outFile = "opencv-outFile.jpg";
     File file = new File(outFile);
     try {
       BufferedImage newImage = new BufferedImage(bi.getWidth(), bi.getHeight(),

@@ -24,7 +24,7 @@ def detect_faces(cascade, image):
 
 
 # loading image
-file = 'src/main/java/model/facerecognition/opencv/outFile.jpg'
+file = 'opencv-outFile.jpg'
 test_image2 = cv2.imread(file)
 haar_cascade_face = cv2.CascadeClassifier(
   'src/main/java/model/facerecognition/opencv/haarcascade_frontalface_alt.xml')
