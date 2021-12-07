@@ -43,14 +43,27 @@ public class FaceRecognitionOPENCV implements FaceRecognition {
       return new Rectangle(0, 0, bi.getWidth(), bi.getHeight());
     }
     BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+    int[] rect = new int[4];
     int x, y, w, h;
+    String s;
+    String out = "";
     try {
-      x = Integer.parseInt(in.readLine());
-      y = Integer.parseInt(in.readLine());
-      w = Integer.parseInt(in.readLine());
-      h = Integer.parseInt(in.readLine());
+      for (int i = 0; i < 4; i++) {
+        s = in.readLine();
+        out += s;
+        try {
+          rect[i] = Integer.parseInt(s);
+        }
+        catch (NumberFormatException e) {
+          while ((s = in.readLine()) != null) {
+            out += s;
+          }
+          System.out.println("invalid output from python script:");
+          System.out.println(out);
+        }
+      }
     }
-    catch (IOException | NumberFormatException e) {
+    catch (IOException e) {
       System.out.println("failed to read python script output");
       return new Rectangle(0, 0, bi.getWidth(), bi.getHeight());
     }
@@ -58,6 +71,6 @@ public class FaceRecognitionOPENCV implements FaceRecognition {
     file.delete();
 
     return new
-        Rectangle(x, y, w, h);
+        Rectangle(rect[0], rect[1], rect[2], rect[3]);
   }
 }
