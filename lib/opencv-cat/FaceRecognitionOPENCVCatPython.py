@@ -24,8 +24,8 @@ def detect_faces(cascade, image):
 
 
 # loading image
-file = "lib/opencv/outFile.jpg"
+file = "lib/opencv-cat/outFile.jpg"
 test_image2 = cv2.imread(file)
-haar_cascade_face = cv2.CascadeClassifier("lib/opencv/haarcascade_frontalface_alt.xml")
+haar_cascade_face = cv2.CascadeClassifier("lib/opencv-cat/haarcascade_frontalcatface_extended.xml")
 # call the function to detect faces
 detect_faces(haar_cascade_face, test_image2)
